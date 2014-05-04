@@ -1,12 +1,13 @@
 'use strict';
 
 angular.module('neDashboardApp', [
+  'chieffancypants.loadingBar',
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ngRoute'
 ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, cfpLoadingBarProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'partials/main',
@@ -15,6 +16,7 @@ angular.module('neDashboardApp', [
       .otherwise({
         redirectTo: '/'
       });
-      
+
+    cfpLoadingBarProvider.includeSpinner = false;
     $locationProvider.html5Mode(true);
   });
