@@ -9,7 +9,8 @@ body {
 margin-top: 50px;
 min-height: 100%;
 position:relative;
-background: url(https://noesisimg.s3.amazonaws.com/nb-images/chalkboard-pattern-lt.jpg);
+/*background: url(https://noesisimg.s3.amazonaws.com/nb-images/chalkboard-pattern-lt.jpg);*/
+background-color: #fefefe;
 -webkit-backface-visibility:visible;
 }
 body.embed-page {padding-top: 0px; }
