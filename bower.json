@@ -1,6 +1,6 @@
 {
   "name": "ne-dashboard",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "dependencies": {
     "angular": ">=1.2.*",
     "json3": "~3.2.6",
@@ -11,7 +11,8 @@
     "angular-sanitize": ">=1.2.*",
     "angular-route": ">=1.2.*",
     "angular-loading-bar": "~0.4.1",
-    "noesis-bootstrap": "*"
+    "noesis-bootstrap": "*",
+    "ne-webServices": "git@github.com:NoesisEnergy/ne-webServices.git"
   },
   "devDependencies": {
     "angular-mocks": ">=1.2.*",

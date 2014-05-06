@@ -19,4 +19,7 @@ angular.module('neDashboardApp', [
 
     cfpLoadingBarProvider.includeSpinner = false;
     $locationProvider.html5Mode(true);
-  });
+  })
+  .value('DefaultSchedulerEndpoint', 'https://dapp.noesisenergy.com/Scheduler/RestResolver.svc/jsonp');
+
+angular.module('neDashboardApp').service('SchedulerService', noesis.webServices.SchedulerService.make());
