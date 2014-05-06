@@ -6,6 +6,7 @@ angular.module('neDashboardApp').controller('MainCtrl', function( $scope, $timeo
 	var guageOptions = {};
 	guageOptions.options =
 	{
+		animation : false,
 		chart     : { type: 'solidgauge' },
 		tooltip   : { enabled: false },
 		exporting : { enabled: false },
@@ -67,21 +68,23 @@ angular.module('neDashboardApp').controller('MainCtrl', function( $scope, $timeo
 
     function createChartInstance( instance, i )
 	{
-		var delay      =  2500 + 350 * ( i % 12 );
+		var delay      =  0;// + 350 * ( i % 12 );
 
 		instance.ServiceName =  instance.ServiceName.replace( 'Brazos.Platform.Services.', '' );
 		instance.ServiceName =  instance.ServiceName.replace( 'Noesis.Platform.Services.', '' );
 
 		instance.chart =  angular.copy(guageOptions);
 		instance.chart.options.title.text =  instance.ServiceName;
-		instance.chart.series[0].data[0] = 0;
+		//instance.chart.series[0].data[0] = 0;
 		instance.chart.series[0].dataLabels.format = createTemplateForGauge( instance.ServiceName );
 
-		$timeout(function()
-		{
-			instance.chart.series[0].data[0] = instance.Current.Load > 100? 100 : instance.Current.Load;
-			cfpLoadingBar.inc( cfpLoadingBar.status() + instanceFrac );
-		}, delay);
+		instance.chart.series[0].data[0] = instance.Current.Load > 100? 100 : instance.Current.Load;
+			//cfpLoadingBar.inc( cfpLoadingBar.status() + instanceFrac );
+
+		// $timeout(function()
+		// {
+
+		// }, delay);
 
 		return instance;
 	}
