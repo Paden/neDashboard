@@ -12,7 +12,9 @@
     "angular-route": ">=1.2.*",
     "angular-loading-bar": "~0.4.1",
     "noesis-bootstrap": "*",
-    "ne-webServices": "git@github.com:NoesisEnergy/ne-webServices.git"
+    "ne-webServices": "git@github.com:NoesisEnergy/ne-webServices.git",
+    "highcharts-release": "git@github.com:highslide-software/highcharts-release.git",
+    "highcharts-ng": "git@github.com:pablojim/highcharts-ng.git"
   },
   "devDependencies": {
     "angular-mocks": ">=1.2.*",

@@ -2,3 +2,8 @@ html, body
 {
   background-color: #fefefe;
 }
+
+.guage-pane
+{
+	max-height: 125px;
+}
