@@ -3,7 +3,18 @@ html, body
   background-color: #fefefe;
 }
 
-.guage-pane
+.gauge-pane
 {
 	max-height: 125px;
+	cursor:pointer;
+}
+
+.gauge-pane:not(.active):hover
+{
+	background: gray;
+}
+
+.gauge-pane.active
+{
+	background: green;
 }

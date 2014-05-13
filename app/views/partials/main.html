@@ -1,5 +1,16 @@
 <div class="row col-md-12">
-  <div class="col-md-2 guage-pane" ng-repeat="instance in instances">
-    <highchart config="instance.chart"></highchart>
-  </div>
+	<div ng-show="clickedInstance">
+  		<div class="well">
+  			<h3 ng-bind-template="{{clickedInstance.ServiceName}} Endpoints:"></h3>
+  			<div ng-repeat="endpoint in clickedInstance.Endpoints">
+  				<a ng-href="{{endpoint}}" ng-bind-template="Endpoint {{$index+1}}"></a>
+  			</div>
+  		</div>
+  	</div>
+	<div class="col-md-2 gauge-pane"
+		ng-repeat="instance in instances"
+		ng-class="{active: clickedInstance===instance }"
+		ng-mouseup="showInstanceInfo(instance);">
+    		<gauge-chart instance="instance"></gauge-chart>
+  	</div>
 </div>
