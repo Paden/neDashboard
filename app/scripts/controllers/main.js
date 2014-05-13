@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('neDashboardApp').controller('MainCtrl', function( $scope, $timeout, cfpLoadingBar, SchedulerService )
+angular.module('neDashboardApp').controller('MainCtrl', function( $scope, $timeout, SchedulerService )
 {
 	function sortInstances( instanceA, instanceB )
 	{

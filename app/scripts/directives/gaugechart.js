@@ -68,7 +68,7 @@ angular.module('neDashboardApp').directive('gaugeChart', function( $timeout )
 
     function createChartInstance( instance )
 	{
-		var delay       =  1500 + 350 * ( numOfInstances % 12 ),
+		var delay       =  1500 + 75 * numOfInstances,
 			chart       =  angular.copy(guageOptions),
 			serviceName =  instance.ServiceName.replace( 'Brazos.Platform.Services.', '' );
 		    serviceName = serviceName.replace( 'Noesis.Platform.Services.', '' );
